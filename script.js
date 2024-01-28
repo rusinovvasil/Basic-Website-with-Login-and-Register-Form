@@ -123,6 +123,8 @@ function login() {
       document.body.style.backgroundColor = "#3498db";
       // Redirect to a success page or show a success message
       alert("Login successful!");
+      loginUsernameInput.value = "";
+      loginPasswordInput.value = "";
     } else {
       // Display an error message for unsuccessful login
       alert("Invalid login credentials. Please try again.");
