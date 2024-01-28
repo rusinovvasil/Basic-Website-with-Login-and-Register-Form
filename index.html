@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Basic Website with Login and Register Form</title>
+  </head>
+  <body>
+    <div class="nav-buttons">
+      <button onclick="navigate('home')">Home</button>
+      <button onclick="toggleRegisterForm()">Register</button>
+      <button onclick="toggleLoginForm()">Login</button>
+    </div>
+
+    <div class="background-container">
+      <img src="background1.jpg" alt="" srcset="" />
+
+      <div class="container">
+        <div class="welcome">
+          <h1>Welcome to Our Stylish Website!</h1>
+          <p>Explore the features and join our community.</p>
+        </div>
+
+        <form id="registerForm" class="hidden">
+          <h2>Register</h2>
+          <label for="username">Username:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            maxlength="12"
+            pattern="[a-zA-Z0-9]+"
+            title="Alphanumeric characters only"
+            required
+            placeholder="Use only letters (a-z, A-Z) and numbers (0-9)"
+          />
+
+          <label for="email">Enter your Email Address:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="example@example.com"
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+            title="Enter a valid email address"
+          />
+
+          <label for="confirmEmail">Confirm Email:</label>
+          <input
+            type="email"
+            id="confirmEmail"
+            name="confirmEmail"
+            required
+            placeholder="Confirm Email"
+          />
+
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            placeholder="Minimum 8 characters, at least one uppercase letter, one lowercase letter, and one number."
+          />
+          <div class="password-strength" id="passwordStrength"></div>
+
+          <label for="confirmPassword">Confirm Password:</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            required
+            placeholder="Confirm Password"
+          />
+
+          <input type="submit" value="Register" onclick="registerUser(event)" />
+        </form>
+
+        <form id="loginForm" class="hidden">
+          <h2>Login</h2>
+          <label for="loginUsername">Username:</label>
+          <input type="text" id="loginUsername" name="loginUsername" required />
+
+          <label for="loginPassword">Password:</label>
+          <input
+            type="password"
+            id="loginPassword"
+            name="loginPassword"
+            required
+          />
+
+          <button type="button" onclick="login()">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

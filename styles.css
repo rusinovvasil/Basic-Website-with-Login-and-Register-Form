@@ -1,0 +1,144 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  color: #fff;
+  background-color: #3498db;
+}
+
+.nav-buttons {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+}
+
+.nav-buttons button {
+  background-color: rgba(52, 152, 219, 0.7);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-buttons button:hover {
+  background-color: rgba(41, 128, 185, 1);
+}
+
+.background-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-container img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.container {
+  background-color: transparent;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin-left: 320px;
+}
+
+.welcome {
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+}
+
+form {
+  margin-bottom: 20px;
+  opacity: 0.8; /* Adjust the opacity as needed */
+}
+
+h2 {
+  color: #3290ee;
+  font-size: 24px; /* Adjust the font size as needed */
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: #3290ee;
+}
+
+input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.password-toggle {
+  display: flex;
+  align-items: end; /* Align checkbox and label vertically */
+  font-size: 164px; /* Set the font size as needed */
+}
+
+.hint {
+  font-size: 12px;
+  color: #a7a776;
+  margin-top: -20px;
+}
+
+.form-button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: #2980b9;
+}
+
+#loginForm,
+#registerForm {
+  right: auto;
+  left: 40%;
+  transform: translateX(0%); /* Center the form horizontally */
+  width: 560px; /* Set the desired width */
+}
+
+#loginForm.hidden,
+#registerForm.hidden {
+  display: none;
+}
+
+#loginForm.show,
+#registerForm.show {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
